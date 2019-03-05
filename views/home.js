@@ -1,5 +1,5 @@
 let d = new Date();
-alert("Today's date is " + d);
+document.body.innerHTML = "<h1>Today's date is " + d + "</h1>"
 
 fetch('/test', {method: 'GET'})
     .then(function(response) {
