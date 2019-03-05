@@ -3,3 +3,10 @@ fetch('/test', {method: 'GET'})
       if(response.ok) return response.json();
       throw new Error('Request failed.');
     });
+    .then(function(data) {
+      document.getElementById('name').innerHTML = `Button was clicked ${data.length} times`;
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}, 1000);
