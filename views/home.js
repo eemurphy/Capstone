@@ -1,3 +1,6 @@
+let d = new Date();
+alert("Today's date is " + d);
+
 fetch('/test', {method: 'GET'})
     .then(function(response) {
       if(response.ok) return response.json();
