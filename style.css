@@ -15,7 +15,7 @@ body {
 }
 .navbar {
   overflow: hidden; /* Hide overflow */
-  background-color: pink; /* Dark background color */
+  background-color: pink;
 }
 
 /* Style the navigation bar links */
@@ -40,7 +40,6 @@ body {
 .row {
   display: flex;
   flex-wrap: wrap;
-  color: pink;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -73,7 +72,7 @@ body {
 }
 
 .footer {
-  padding: 20px; /* Some padding */
-  text-align: center; /* Center text*/
-  background: #ddd; /* Grey background */
+  padding: 20px; 
+  text-align: center;
+  background: pink;
 }
