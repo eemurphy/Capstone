@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> homepage </title>
+<title> Home </title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -14,17 +14,53 @@
         background: #labc9c;
         color: pink;
     }
+    .header h1 {
+      font-size: 40px;
+    }
+    .navbar {
+      overflow: hidden; /* Hide overflow */
+      background-color: pink; /* Dark background color */
+    }
+
+    /* Style the navigation bar links */
+    .navbar a {
+      float: left; /* Make sure that the links stay side-by-side */
+      display: block; /* Change the display to block, for responsive reasons (see below) */
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none; /* Remove underline */
+    }
+    .navbar a.right {
+      float: right; /* Float a link to the right */
+    }
+
+    /* Change color on hover/mouse-over */
+    .navbar a:hover {
+      background-color: #ddd; /* Grey background color */
+      color: black; /* Black text color */
+    }
 </style>
 </head>
 <body>
 
+<!-- Header-->
 <div class="header">
- <h1> rice hippy </h1>
+ <h1> ricehippy </h1>
  <p> A website created by Erin Murphy </p>
  <p id="demo"></p>
 </div>
 
- <script type="text/javascript" src="views\home.js"> </script>
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="#">Account</a>
+  <a href="#">Recipe Search</a>
+  <a href="#">Shopping List</a>
+  <a href="#" class="right">About</a>
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript" src="views\home.js"> </script>
 
 </body>
 </html>
