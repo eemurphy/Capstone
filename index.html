@@ -4,43 +4,7 @@
 <title> Home </title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    .header {
-        padding: 80px;
-        text-align: center;
-        background: #labc9c;
-        color: pink;
-    }
-    .header h1 {
-      font-size: 40px;
-    }
-    .navbar {
-      overflow: hidden; /* Hide overflow */
-      background-color: pink; /* Dark background color */
-    }
-
-    /* Style the navigation bar links */
-    .navbar a {
-      float: left; /* Make sure that the links stay side-by-side */
-      display: block; /* Change the display to block, for responsive reasons (see below) */
-      color: white;
-      text-align: center;
-      padding: 14px 20px;
-      text-decoration: none; /* Remove underline */
-    }
-    .navbar a.right {
-      float: right; /* Float a link to the right */
-    }
-
-    /* Change color on hover/mouse-over */
-    .navbar a:hover {
-      background-color: #ddd; /* Grey background color */
-      color: black; /* Black text color */
-    }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -57,6 +21,16 @@
   <a href="#">Recipe Search</a>
   <a href="#">Shopping List</a>
   <a href="#" class="right">About</a>
+</div>
+
+<!-- Side and Main Content -->
+<div class="row">
+  <div class="side">
+    <h2> Sidebar </h2>
+  </div>
+  <div class="main">
+    <h2> Main Section </h2>
+  </div>
 </div>
 
 <!-- Scripts -->
