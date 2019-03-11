@@ -33,8 +33,8 @@ body {
 
 /* Change color on hover/mouse-over */
 .navbar a:hover {
-  background-color: #ddd; /* Grey background color */
-  color: black; /* Black text color */
+  background-color: grey;
+  color: black;
 }
 /* Column container */
 .row {
@@ -46,15 +46,15 @@ body {
 /* Sidebar/left column */
 .side {
   flex: 30%; /* Set the width of the sidebar */
-  background-color: #f1f1f1; /* Grey background color */
-  padding: 20px; /* Some padding */
+  background-color: grey;
+  padding: 20px;
 }
 
 /* Main column */
 .main {
   flex: 70%; /* Set the width of the main content */
-  background-color: white; /* White background color */
-  padding: 20px; /* Some padding */
+  background-color: white;
+  padding: 20px;
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
