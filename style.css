@@ -1,3 +1,5 @@
+@import url('login.css');
+
 * {
   box-sizing: border-box;
 }
@@ -8,61 +10,58 @@ body {
 .header {
     padding: 80px;
     text-align: center;
-    background: #labc9c;
-    color: pink;
+    background: #E8FFE8;
+    color: #347A33;
 }
 .header h1 {
   font-size: 40px;
+  color: #083A07;
 }
 .navbar {
   overflow: hidden; /* Hide overflow */
-  background-color: pink;
+  background-color: #70BF6E;
 }
 
 /* Style the navigation bar links */
 .navbar a {
   float: left; /* Make sure that the links stay side-by-side */
   display: block; /* Change the display to block, for responsive reasons (see below) */
-  color: white;
+  color: #E8FFE8;
   text-align: center;
-  padding: 14px 20px;
+  padding: 14px;
   text-decoration: none; /* Remove underline */
-}
-.navbar a.right {
-  float: right; /* Float a link to the right */
 }
 
 /* Change color on hover/mouse-over */
 .navbar a:hover {
-  background-color: grey;
-  color: black;
+  background-color: #E8FFE8;
+  color: #70BF6E;
 }
 
 .navbar .search-container {
   float: right;
 }
+
 .navbar input[type=text] {
-  padding: 6px;
+  padding: 8px;
   border: none;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
+  margin-top: 7px;
+  margin-right: 5px;
+  font-size: 12px;
 }
 
 .navbar .search-container button {
   float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
+  background: #083A07;
+  width: 75px;
+  font-size: 12px;
   border: none;
   cursor: pointer;
+  margin-top: 7px;
+  margin-right: 5px;
+  padding: 8px;
 }
 
-.navbar .search-container button:hover {
-  background: #ccc;
-}
 
 /* Column container */
 .row {
@@ -74,15 +73,17 @@ body {
 /* Sidebar/left column */
 .side {
   flex: 30%; /* Set the width of the sidebar */
-  background-color: grey;
+  background-color: #C2EFC2;
   padding: 20px;
+  color: #347A33;
 }
 
 /* Main column */
 .main {
   flex: 70%; /* Set the width of the main content */
-  background-color: white;
+  background-color: #E8FFE8;
   padding: 20px;
+  color: #083A07;
 }
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
@@ -109,5 +110,7 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: pink;
+  background: #70BF6E;
+  color: #E8FFE8;
+  font-size: 10px;
 }

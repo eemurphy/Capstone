@@ -17,10 +17,48 @@
 
 <!-- Navigation Bar -->
 <div class="navbar">
-  <a href="/Capstone/acocunt.html">Account</a>
-  <a href="/Capstone/search.html">Recipe Search</a>
-  <a href="/Capstone/index.html">Home</a>
-  <a href="/Capstone/about.html" class="right">About</a>
+  <a href="index.html">Home</a>
+  <a href="account.html">Account</a>
+  <a href="search.html">Recipe Search</a>
+  <a href="list.html">Shopping List</a>
+  <!-- Login -->
+  <!-- Button to open the modal login form -->
+  <button class="login" onclick="document.getElementById('id01').style.display='block'" style="width:auto; float: right;">Login</button>
+  <!-- The Modal -->
+  <div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'"class="close" title="Close Modal">&times;</span>
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="login.php">
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+      <div class="container" style="background-color: #E8FFE8">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>
+    </form>
+  </div>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </div>
 
 <!-- Side and Main Content -->
