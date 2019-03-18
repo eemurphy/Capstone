@@ -12,6 +12,7 @@
 <div class="header">
  <h1> ricehippy </h1>
  <p> A website created by Erin Murphy </p>
+ <?php echo '<p>Hello World</p>'; ?>
  <p id="demo"></p>
 </div>
 
