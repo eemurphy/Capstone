@@ -1,31 +1,26 @@
 <?php  //Start the Session
  include('config.php');
-//3. If the form is submitted or not.
-//3.1 If the form is submitted
-if (isset($_POST['username']) and isset($_POST['password'])){
-//3.1.1 Assigning posted values to variables.
-$username = $_POST['username'];
-$password = $_POST['password'];
-//3.1.2 Checking the values are existing in the database or not
-$query = mysqli_query("SELECT * FROM user WHERE username='$username' and password='$password'");
+ session_start();
+ print_r($_POST);
 
-$count = mysqli_num_rows($query);
-//3.1.2 If the posted values are equal to the database values, then session will be created for the user.
-if ($count == 1){
-$_SESSION['username'] = $username;
-}else{
-//3.1.3 If the login credentials doesn't match, he will be shown with an error message.
-$fmsg = "Invalid Login Credentials.";
-}
-}
-//3.1.4 if the user is logged in Greets the user with message
-if (isset($_SESSION['username'])){
-$username = $_SESSION['username'];
-$_SESSION['logged'] = TRUE;
-header("Location: index.html");
-exit;
-}else{
-  header("Location: search.html");
-}
+ if (isset($_POST['username']) and isset($_POST['password'])) {
+   $myusername = $_POST['username'];
+   $mypassword = $_POST['password'];
+   $sql = "SELECT * FROM user WHERE username = '$myusername' and password = '$mypassword'";
+   $result = mysqli_query($conn, $sql);
+
+   $count = mysqli_num_rows($result);
+
+   if ($count == 1) {
+     $_SESSION['login_user'] = $myusername;
+     echo "yay!";
+   }else {
+     echo "boo";
+   }
+ }else {
+   echo "fork";
+ }
+
+
 
 ?>

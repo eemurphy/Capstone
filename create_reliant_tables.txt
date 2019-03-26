@@ -1,0 +1,92 @@
+CREATE TABLE diet_recipes(
+  recipe_id  INT,
+  diet_id INT,
+  PRIMARY KEY (recipe_id, diet_id),
+  FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
+  FOREIGN KEY (diet_id) REFERENCES diet(diet_id)
+);
+
+CREATE TABLE diets_inlcuded(
+  main_diet INT,
+  inner_diet INT,
+  PRIMARY KEY (main_diet, inner_diet),
+  FOREIGN KEY main_diet(diet_id) REFERENCES diet(diet_id),
+  FOREIGN KEY inner_diet(diet_id) REFERENCES diet(diet_id)
+);
+
+CREATE TABLE shopping_ingredients(
+  ingredient_id INT,
+  shoppingList_id INT,
+  PRIMARY KEY (ingredient_id, shoppingList_id),
+  FOREIGN KEY (ingredient_id) REFERENCES ingredients(ingredient_id),
+  FOREIGN KEY (shoppingList_id) REFERENCES shopping_list(shoppingList_id)
+);
+
+CREATE TABLE diet_restrictions(
+  ingredient_id INT,
+  diet_id INT,
+  allowed BOOLEAN NOT NULL,
+  PRIMARY KEY (ingredient_id, diet_id),
+  FOREIGN KEY (ingredient_id) REFERENCES ingredients(ingredient_id),
+  FOREIGN KEY (diet_id) REFERENCES diet(diet_id)
+);
+
+CREATE TABLE board_recipes(
+  recipe_id INT,
+  board_id INT,
+  PRIMARY KEY (recipe_id, board_id),
+  FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id),
+  FOREIGN KEY (board_id) REFERENCES board(board_id)
+);
+
+ALTER TABLE kitchen_ingredients
+ADD COLUMN kitchen_id INT;
+
+ALTER TABLE kitchen_ingredients
+ADD FOREIGN KEY (kitchen_id) REFERENCES kitchen(kitchen_id);
+
+ALTER TABLE kitchen_ingredients
+ADD COLUMN ingredient_id INT;
+
+ALTER TABLE kitchen_ingredients
+ADD FOREIGN KEY (ingredient_id) REFERENCES ingredients(ingredient_id);
+
+ALTER TABLE kitchen_ingredients
+ADD PRIMARY KEY (kitchen_id, ingredient_id);
+
+ALTER TABLE user
+ADD COLUMN kitchen_id INT;
+
+ALTER TABLE user
+ADD FOREIGN KEY (kitchen_id) REFERENCES kitchen(kitchen_id);
+
+ALTER TABLE user
+ADD COLUMN shoppingList_id INT;
+
+ALTER TABLE user
+ADD FOREIGN KEY (shoppingList_id) REFERENCES shopping_list(shoppingList_id);
+
+ALTER TABLE user
+ADD COLUMN diet_id INT;
+
+ALTER TABLE user
+ADD FOREIGN KEY (diet_id) REFERENCES diet(diet_id);
+
+ALTER TABLE board
+ADD COLUMN user_id INT;
+
+ALTER TABLE board
+ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+
+
+ALTER TABLE recipe_ingredients
+ADD COLUMN recipe_id INT;
+
+ALTER TABLE recipe_ingredients
+ADD COLUMN ingredient_id INT;
+ALTER TABLE recipe_ingredients
+ADD PRIMARY KEY (recipe_id, ingredient_id);
+ALTER TABLE recipe_ingredients
+ADD FOREIGN KEY (ingredient_id) REFERENCES ingredients(ingredient_id);
+ALTER TABLE recipe_ingredients
+ADD FOREIGN KEY (recipe_id) REFERENCES recipe(recipe_id);

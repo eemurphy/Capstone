@@ -26,31 +26,20 @@
   <!-- Button to open the modal login form -->
   <a href="login.html">Login</a>
   <!-- The Modal -->
-  
+
 </div>
 
-<!-- Side and Main Content -->
-<div class="row">
-  <div class="side">
-    <h1> About </h1>
-    <p> Rice Hippy is a website where people trying to follow a diet,
-      or even those who just want to eat healthier, can manage their
-      recipes and find new ones in a community that values the same
-      things as themselves.
-    </p>
-  </div>
-  <div class="main">
-    <h1> Main Section </h1>
-    <p> This is where recipes will be. </p>
-  </div>
-</div>
+    <form method="post" action="login.php">
 
-<div class="footer">
-  <h2>figure out how to lock to bottom</h2>
-</div>
+        <label for="username"><b>Username</b></label>
+        <input type="text" name="username">
 
-<!-- Scripts -->
-<script type="text/javascript" src="home.js"> </script>
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password">
 
-</body>
-</html>
+        <button type="submit">Login</button>
+      </form>
+      <div class="container" style="background-color: #E8FFE8">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="#">Forgot password?</a></span>
+      </div>

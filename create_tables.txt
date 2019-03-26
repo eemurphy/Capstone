@@ -1,0 +1,58 @@
+CREATE TABLE user (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(50) NOT NULL,
+  email VARCHAR(50) UNIQUE
+);
+
+CREATE TABLE kitchen (
+  kitchen_id INT AUTO_INCREMENT PRIMARY KEY,
+  ing_amt INT
+);
+
+CREATE TABLE recipe (
+  recipe_id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  cook_time TIME,
+  prep_time TIME,
+  description VARCHAR(1000),
+  ing_amt INT,
+  views INT,
+  servings INT,
+  meal_type ENUM ('breakfast', 'lunch', 'dinner', 'snack', 'dessert')
+);
+
+CREATE TABLE kitchen_ingredients(
+  priority ENUM ('high', 'medium', 'low'),
+  amount INT
+);
+
+CREATE TABLE diet(
+  diet_id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  preference BOOLEAN
+);
+
+CREATE TABLE board(
+  board_id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(50),
+  public BOOLEAN,
+  description VARCHAR(1000)
+);
+
+CREATE TABLE shopping_list(
+  shoppingList_id INT AUTO_INCREMENT PRIMARY KEY,
+  total_price INT
+);
+
+CREATE TABLE recipe_ingredients(
+  optional BOOLEAN,
+  amount INT NOT NULL
+);
+
+CREATE TABLE ingredients(
+  ingredient_id INT AUTO_INCREMENT PRIMARY KEY,
+  price INT,
+  food_group VARCHAR(50),
+  name VARCHAR(50) NOT NULL UNIQUE
+);

@@ -1,9 +1,9 @@
 <?php
 /* Database credentials. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
-$servername = "localhost:8080";
+$servername = "localhost:3306";
 $username = "root";
-$password = "icecubes97";
+$password = "";
 $dbname = "capstone";
 
 /* Attempt to connect to MySQL database */
