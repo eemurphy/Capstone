@@ -14,7 +14,6 @@ session_start();
 <!-- Header-->
 <div class="header">
  <h1> ricehippy </h1>
-
 </div>
 
 <!-- Navigation Bar -->
@@ -46,31 +45,32 @@ session_start();
 
 </div>
 
-<!-- Side and Main Content -->
-<div class="row">
-  <div class="side">
-    <h1> About </h1>
-    <p> Rice Hippy is a website where people trying to follow a diet,
-      or even those who just want to eat healthier, can manage their
-      recipes and find new ones in a community that values the same
-      things as themselves.
-    </p>
-  </div>
-  <div class="main">
-    <h1> Main Section </h1>
-    <p> This is where recipes will be. </p>
-    <p> Don't have an account? </p>
-    <a href = "signup.php"> Sign up here! </a>
 
-  </div>
+
+
+<div class="row">
+  <div class="main">
+    <form action="action_page.php" style="border:1px solid #ccc">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+      <label for="username"><b>Username</b></label>
+      <input type="text" placeholder="Username" name="username" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </form>
 </div>
 
 <div class="footer">
-  <h2>figure out how to lock to bottom</h2>
+  <h2>created by Erin Murphy</h2>
 </div>
-
-<!-- Scripts -->
-<script type="text/javascript" src="home.js"> </script>
 
 </body>
 </html>

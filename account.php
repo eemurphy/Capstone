@@ -14,7 +14,6 @@ session_start();
 <!-- Header-->
 <div class="header">
  <h1> ricehippy </h1>
-
 </div>
 
 <!-- Navigation Bar -->
@@ -49,24 +48,33 @@ session_start();
 <!-- Side and Main Content -->
 <div class="row">
   <div class="side">
-    <h1> About </h1>
-    <p> Rice Hippy is a website where people trying to follow a diet,
-      or even those who just want to eat healthier, can manage their
-      recipes and find new ones in a community that values the same
-      things as themselves.
-    </p>
+    <h1> My Kitchen </h1>
+    <br>
+    <h1> My Boards </h1>
+    <br>
+    <h1> Shopping List </h1>
+    <br>
+    <h1> My Diet </h1>
+
+
   </div>
   <div class="main">
-    <h1> Main Section </h1>
-    <p> This is where recipes will be. </p>
-    <p> Don't have an account? </p>
-    <a href = "signup.php"> Sign up here! </a>
+    <h1> Account </h1>
+    <br>
+    <?php
+      if(isset($_SESSION['login_user'])) {
+        echo "Welcome, " . $_SESSION['login_user'] . "!";
+      }else {
+        echo "Welcome, Guest! Please log in to use your account.";
+      }
+
+      ?>
 
   </div>
 </div>
 
 <div class="footer">
-  <h2>figure out how to lock to bottom</h2>
+  <h2>created by Erin Murphy</h2>
 </div>
 
 <!-- Scripts -->

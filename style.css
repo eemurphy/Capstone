@@ -8,7 +8,7 @@ body {
     margin: 0px;
 }
 .header {
-    padding: 80px;
+    padding: 10px;
     text-align: center;
     background: #E8FFE8;
     color: #347A33;
@@ -42,7 +42,7 @@ body {
   float: right;
 }
 
-.navbar input[type=text] {
+.navbar input[type=text], input[type=password] {
   padding: 8px;
   border: none;
   margin-top: 7px;

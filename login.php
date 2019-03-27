@@ -12,7 +12,7 @@
 
    if ($count == 1) {
      $_SESSION['login_user'] = $myusername;
-     header('Location: index.php');
+     header('Location: ' . $_SERVER['HTTP_REFERER']);
    }else {
      echo "boo";
    }
