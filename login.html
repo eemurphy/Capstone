@@ -12,8 +12,7 @@
 <div class="header">
  <h1> ricehippy </h1>
  <p> A website created by Erin Murphy </p>
- <?php echo '<p>Hello World</p>'; ?>
- <p id="demo"></p>
+ 
 </div>
 
 <!-- Navigation Bar -->
@@ -22,24 +21,13 @@
   <a href="account.html">Account</a>
   <a href="search.html">Recipe Search</a>
   <a href="list.html">Shopping List</a>
-  <!-- Login -->
-  <!-- Button to open the modal login form -->
-  <a href="login.html">Login</a>
-  <!-- The Modal -->
+
+  <div class="login-container">
+    <form method="post" action="login.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="password">
+      <button type="submit">Login</button>
+    </form>
+  </div>
 
 </div>
-
-    <form method="post" action="login.php">
-
-        <label for="username"><b>Username</b></label>
-        <input type="text" name="username">
-
-        <label for="password"><b>Password</b></label>
-        <input type="password" name="password">
-
-        <button type="submit">Login</button>
-      </form>
-      <div class="container" style="background-color: #E8FFE8">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw"><a href="#">Forgot password?</a></span>
-      </div>

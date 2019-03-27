@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php
+session_start();
+?>
 <html lang="en">
 <head>
 <title> Home </title>
@@ -12,7 +15,14 @@
 <div class="header">
  <h1> ricehippy </h1>
  <p> A website created by Erin Murphy </p>
- <?php echo '<p>Hello World</p>'; ?>
+ <?php
+  if(isset($_SESSION['login_user'])) {
+    echo "Welcome: " . $_SESSION['login_user'];
+  }else {
+    echo "Welcome: Guest";
+  }
+
+ ?>
  <p id="demo"></p>
 </div>
 
@@ -22,11 +32,28 @@
   <a href="account.html">Account</a>
   <a href="search.html">Recipe Search</a>
   <a href="list.html">Shopping List</a>
-  <!-- Login -->
-  <!-- Button to open the modal login form -->
-  <a href="login.html">Login</a>
-  <!-- The Modal -->
-  
+  <?php
+    if(!isset($_SESSION['login_user'])) { ?>
+      <div class="login-container">
+        <form method="post" action="login.php">
+          <input type="text" placeholder="Username" name="username">
+          <input type="text" placeholder="Password" name="password">
+          <button type="submit">Login</button>
+        </form>
+      </div>
+  <?php
+    }else { ?>
+      <div class="login-container">
+        <form method="post" action="logout.php">
+          <button type="submit">Logout</button>
+        </form>
+      </div>
+  <?php
+    }
+
+ ?>
+
+
 </div>
 
 <!-- Side and Main Content -->

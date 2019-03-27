@@ -1,7 +1,6 @@
 <?php  //Start the Session
  include('config.php');
  session_start();
- print_r($_POST);
 
  if (isset($_POST['username']) and isset($_POST['password'])) {
    $myusername = $_POST['username'];
@@ -13,7 +12,7 @@
 
    if ($count == 1) {
      $_SESSION['login_user'] = $myusername;
-     echo "yay!";
+     header('Location: index.php');
    }else {
      echo "boo";
    }

@@ -50,6 +50,25 @@ body {
   font-size: 12px;
 }
 
+.navbar .login-container {
+  float: right;
+}
+
+.navbar .login-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .login-container button:hover {
+  background: #ccc;
+}
+
 .navbar .search-container button {
   float: right;
   background: #083A07;
@@ -104,6 +123,9 @@ body {
   }
   .navbar input[type=text] {
     border: 1px solid #ccc;
+  }
+  .navbar .login-container {
+    float: none;
   }
 }
 
