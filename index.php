@@ -7,7 +7,7 @@ session_start();
 <title> Home </title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -20,12 +20,12 @@ session_start();
 <!-- Navigation Bar -->
 <div class="navbar">
   <a href="index.php">Home</a>
-  <a href="search.php">Search</a>
-  <a href="account.php">Account</a>
+  <a href="pages/search.php">Search</a>
+  <a href="pages/account.php">Account</a>
   <?php
     if(!isset($_SESSION['login_user'])) { ?>
       <div class="login-container">
-        <form method="post" action="login.php">
+        <form method="post" action="php/login.php">
           <input type="text" placeholder="Username" name="username">
           <input type="password" placeholder="Password" name="password">
           <button type="submit">Login</button>
@@ -60,7 +60,7 @@ session_start();
     <h1> Main Section </h1>
     <p> This is where recipes will be. </p>
     <p> Don't have an account? </p>
-    <a href = "signup.php"> Sign up here! </a>
+    <a href = "pages/signup.php"> Sign up here! </a>
 
   </div>
 </div>
