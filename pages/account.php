@@ -8,6 +8,8 @@ session_start();
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/accounts.css">
+<script type="text/javascript" src="../js/openTabs.js"> </script>
 </head>
 <body>
 
@@ -48,17 +50,15 @@ session_start();
 <!-- Side and Main Content -->
 <div class="row">
   <div class="side">
-    <h1> My Kitchen </h1>
-    <br>
-    <h1> My Boards </h1>
-    <br>
-    <h1> Shopping List </h1>
-    <br>
-    <h1> My Diet </h1>
+    <button class="tablinks" onclick="openTab(event, 'Kitchen')" id="defaultOpen" >Kitchen</button>
+    <button class="tablinks" onclick="openTab(event, 'Boards')">Boards</button>
+    <button class="tablinks" onclick="openTab(event, 'Shopping List')">Shopping List</button>
+    <button class="tablinks" onclick="openTab(event, 'Diet')">Diet</button>
 
 
   </div>
   <div class="main">
+
     <h1> Account </h1>
     <br>
     <?php
@@ -69,6 +69,22 @@ session_start();
       }
 
       ?>
+      <div id="Kitchen" class="tab">
+        <h3>Kitchen</h3>
+        <p>This is your kitchen.</p>
+      </div>
+      <div id="Boards" class="tab">
+        <h3>Boards</h3>
+        <p>This is your boards.</p>
+      </div>
+      <div id="Shopping List" class="tab">
+        <h3>Shopping List</h3>
+        <p>This is your shopping list.</p>
+      </div>
+      <div id="Diet" class="tab">
+        <h3>Diet</h3>
+        <p>This is your diet.</p>
+      </div>
 
   </div>
 </div>
@@ -77,8 +93,7 @@ session_start();
   <h2>created by Erin Murphy</h2>
 </div>
 
-<!-- Scripts -->
-<script type="text/javascript" src="home.js"> </script>
+<script> document.getElementById("defaultOpen").click(); </script>
 
 </body>
 </html>
