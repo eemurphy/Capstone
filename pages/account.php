@@ -9,6 +9,7 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/accounts.css">
+<link rel="stylesheet" href="../css/boards.css">
 <script type="text/javascript" src="../js/openTabs.js"> </script>
 </head>
 <body>
@@ -50,7 +51,8 @@ session_start();
 <!-- Side and Main Content -->
 <div class="row">
   <div class="side">
-    <button class="tablinks" onclick="openTab(event, 'Kitchen')" id="defaultOpen" >Kitchen</button>
+    <button class="tablinks" onclick="openTab(event, 'Account')" id="defaultOpen" >Account</button>
+    <button class="tablinks" onclick="openTab(event, 'Kitchen')" >Kitchen</button>
     <button class="tablinks" onclick="openTab(event, 'Boards')">Boards</button>
     <button class="tablinks" onclick="openTab(event, 'Shopping List')">Shopping List</button>
     <button class="tablinks" onclick="openTab(event, 'Diet')">Diet</button>
@@ -58,28 +60,52 @@ session_start();
 
   </div>
   <div class="main">
-
-    <h1> Account </h1>
-    <br>
-    <?php
-      if(isset($_SESSION['login_user'])) {
-        echo "Welcome, " . $_SESSION['login_user'] . "!";
-      }else {
-        echo "Welcome, Guest! Please log in to use your account.";
-      }
-
-      ?>
+    <div id="Account" class="tab">
+      <h1> Account </h1>
+      <br>
+      <?php
+        if(isset($_SESSION['login_user'])) {
+          echo "Welcome, " . $_SESSION['login_user'] . "!";
+        }else {
+          echo "Welcome, Guest! Please log in to use your account.";
+        }
+        ?>
+      </div>
       <div id="Kitchen" class="tab">
-        <h3>Kitchen</h3>
-        <p>This is your kitchen.</p>
+        <h2>Kitchen</h2>
+        <h4> Add Ingredient </h4>
+        <form method="post" action="../php/addIng.php">
+          <label name="ingredient">Ingredient: </label>
+          <input type="text" placeholder="ingredient" name="ingredient">
+          <label name="quantity">Quantity: </label>
+          <input type="text" placeholder="Quantity" name="quantity">
+          <button type="submit">Add</button>
+        </form>
+        <h4> What's In My Kitchen </h4>
+        <!-- List current ingredients here -->
+
       </div>
       <div id="Boards" class="tab">
         <h3>Boards</h3>
         <p>This is your boards.</p>
+        <div class="board-row">
+          <div class="board-column">
+            <div class="board">
+              <h3>Create Board</h3>
+            </div>
+          </div>
+          <div class="board-column">
+            <div class="board">
+              <h3>Create Board</h3>
+            </div>
+          </div>
+
+        </div>
+
       </div>
       <div id="Shopping List" class="tab">
         <h3>Shopping List</h3>
-        <p>This is your shopping list.</p>
+        <!-- List shopping list items here -->
       </div>
       <div id="Diet" class="tab">
         <h3>Diet</h3>
