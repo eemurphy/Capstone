@@ -8,7 +8,7 @@ if (isset($_POST['ingredient']) and isset($_POST['quantity'])) {
   $kitchen_row = mysqli_fetch_array($kitchen_result);
   $kitchen_id = $kitchen_row[0];
 
-  $ingquery = "SELECT ingredient_id FROM ingredients WHERE name=".$_POST['ingredient'];
+  $ingquery = "SELECT ingredient_id FROM ingredients WHERE name= '".$_POST['ingredient']."'";
   $ing_result = mysqli_query($conn, $ingquery) or die(mysqli_error($conn));
   $ing_row = mysqli_fetch_array($ing_result);
   $ing_id = $ing_row[0];

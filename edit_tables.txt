@@ -1,27 +1,31 @@
-ALTER TABLE user
-DROP FOREIGN_KEY kitchen_id,
-DROP FOREIGN_KEY shoppingList_id,
-DROP FOREIGN_KEY diet_id;
+INSERT INTO ingredients (name)
+VALUES ("artichoke"), ("eggplant"), ("asparagus"), ("alfalfa sprouts"), ("azuki beans"),
+("bean sprouts"), ("black beans"), ("black-eyed peas"), ("borlotti bean"),
+("broad beans"), ("chickpeas"), ("garbanzo beans"), ("green beans"),
+("kidney beans"), ("lentils"), ("lima beans"), ("butter bean"), ("mung beans"),
+("navy beans"), ("pinto beans"), ("runner beans"), ("split peas"), ("soy beans"),
+("peas"), ("snap peas"), ("broccoli"), ("brussels sprouts"), ("cabbage"), ("kohlrabi"),
+("cauliflower"), ("celery"), ("endive"), ("fiddleheads"), ("frisee"), ("fennel"), ("chard"),
+("bok choy"), ("collard greens"), ("kale"), ("mustard greens"), ("spinach"), ("anise"),
+("basil"), ("caraway"), ("cilantro"), ("coriander"), ("chamomile"), ("dill"), ("lavender"),
+("lemon grass"), ("marjoram"), ("oregano"), ("parsley"), ("rosemary"), ("sage"), ("thyme"), ("lettuce"),
+("arugula"), ("mushrooms"), ("nettles"), ("okra"), ("onions"), ("chives"), ("garlic"), ("leek"),
+("shallot"), ("scallion"), ("spring on"), ("jalapeño"), ("habanero"), ("paprika"), ("tabasco pepper"),
+("cayenne pepper"), ("radicchio"), ("rhubarb"), ("beetroot"), ("beet"), ("carrot"),
+("celeriac"), ("water chestnut"), ("ginger"), ("parsnip"), ("rutabaga"), ("radish"),
+("wasabi"), ("horseradish"), ("white radish"), ("daikon"), ("jicama"), ("potato"),
+("sweet potato"), ("yam"), ("turnip"), ("sweetcorn"), ("acorn squash"), ("bitter melon"),
+("butternut squash"), ("banana squash"), ("courgette"), ("zucchini"), ("cucumber"),
+("marrow"), ("patty pans"), ("pumpkin"), ("spaghetti squash"), ("tomato"), ("watercress")
 
-ALTER TABLE user
-DROP COLUMN kitchen_id,
-DROP COLUMN shoppingList_id,
-DROP COLUMN diet_id;
-
-ALTER TABLE kitchen
-ADD COLUMN user_id INT;
-
-ALTER TABLE shopping_list
-ADD COLUMN user_id INT;
-
-ALTER TABLE diet
-ADD COLUMN user_id INT;
-
-ALTER TABLE kitchen
-ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
-
-ALTER TABLE shopping_list
-ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
-
-ALTER TABLE diet
-ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+INSERT INTO ingredients (name)
+VALUES ("açaí"), ("apple"), ("akee"), ("apricot"), ("avocado"), ("banana"), ("bilberry"), ("blackberry"),
+("blueberry"), ("boysenberry"), ("crab apples"), ("currant"), ("cherry"), ("chico fruit"),
+("cloudberry"), ("coconut"), ("cranberry"), ("damson"), ("date"), ("dragonfruit"),
+("durian"), ("elderberry"), ("feijoa"), ("fig"), ("goji berry"), ("gooseberry"), ("grape"), ("raisin"),
+("grapefruit"), ("guava"), ("honeyberry"), ("huckleberry"), ("jackfruit"), ("juniper berry"),
+("kiwi"), ("kumquat"), ("lemon"), ("lime"), ("mango"), ("cantaloupe"), ("honeydew"), ("watermelon"),
+("nectarine"), ("orange"), ("blood orange"), ("clementine"), ("mandarine"), ("tangerine"),
+("papaya"), ("passionfruit"), ("peach"), ("pear"), ("persimmon"), ("plantain"), ("plum"), ("prune"),
+("pineapple"), ("pomegranate"), ("pomelo"), ("quince"), ("raspberry"), ("salmonberry"), ("redcurrant"),
+("star fruit"), ("strawberry"), ("ugli fruit"), ("olive"), ("pea"), ("squash");

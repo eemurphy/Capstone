@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+
 session_start();
 ?>
 <html lang="en">
@@ -64,6 +65,7 @@ session_start();
       <h1> Account </h1>
       <br>
       <?php
+        include('../php/config.php');
         if(isset($_SESSION['login_user'])) {
           echo "Welcome, " . $_SESSION['login_user'] . "!";
         }else {
@@ -82,6 +84,32 @@ session_start();
           <button type="submit">Add</button>
         </form>
         <h4> What's In My Kitchen </h4>
+
+        <?php
+
+          if (isset($_SESSION['id'])) {
+            $sql = "SELECT ingredients.name, kitchen_ingredients.amount
+                    FROM ingredients, kitchen_ingredients, kitchen, user
+                    WHERE user.user_id=kitchen.user_id && kitchen_ingredients.kitchen_id=kitchen.kitchen_id
+                          && kitchen_ingredients.kitchen_id=kitchen.kitchen_id
+                          && ingredients.ingredient_id=kitchen_ingredients.ingredient_id
+                          && user.user_id=".$_SESSION['id'];
+            $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
+
+            if ($result->num_rows > 0) {
+              // output data of each row
+              while($row = $result->fetch_assoc()) {
+                echo "Item: " . $row["name"]. " Quantity: " . $row["amount"]. "<br>";
+              }
+            } else {
+              echo "0 results";
+            }
+          } else {
+            echo "You must be logged in to add ingredients to your kitchen.";
+          }
+
+
+        ?>
         <!-- List current ingredients here -->
 
       </div>
