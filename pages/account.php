@@ -99,7 +99,7 @@ session_start();
             if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-                echo "Item: " . $row["name"]. " Quantity: " . $row["amount"]. "<br>";
+                echo $row["amount"]. " " .$row["name"]. "<br>";
               }
             } else {
               echo "0 results";
@@ -147,7 +147,11 @@ session_start();
   <h2>created by Erin Murphy</h2>
 </div>
 
-<script> document.getElementById("defaultOpen").click(); </script>
+<script>
+
+document.getElementById("defaultOpen").click();
+
+</script>
 
 </body>
 </html>
