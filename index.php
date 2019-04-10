@@ -34,7 +34,7 @@ session_start();
   <?php
     }else { ?>
       <div class="login-container">
-        <form method="post" action="logout.php">
+        <form method="post" action="php/logout.php">
           <button type="submit">Logout</button>
         </form>
       </div>

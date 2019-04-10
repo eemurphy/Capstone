@@ -1,0 +1,57 @@
+VEGETABLES
+artichoke, eggplant, asparagus, alfalfa sprouts, azuki beans,
+bean sprouts, black beans, black-eyed peas, borlotti bean,
+broad beans, chickpeas, garbanzo beans, green beans,
+kidney beans, lentils, lima beans, butter bean, mung beans,
+navy beans, pinto beans, runner beans, split peas, soy beans,
+peas, snap peas, broccoli, brussels sprouts, cabbage, kohlrabi,
+cauliflower, celery, endive, fiddleheads, frisee, fennel, chard,
+bok choy, collard greens, kale, mustard greens, spinach, anise,
+basil, caraway, cilantro, coriander, chamomile, dill, fennel, lavender,
+lemon grass, marjoram, oregano, parsley, rosemary, sage, thyme, lettuce,
+arugula, mushrooms, nettles, okra, onions, chives, garlic, leek,
+shallot, scallion, spring on, jalapeño, habanero, paprika, tabasco pepper,
+cayenne pepper, radicchio, rhubarb, beetroot, beet, carrot,
+celeriac, water chestnut, ginger, parsnip, rutabaga, radish,
+wasabi, horseradish, white radish, daikon, jicama, potato,
+sweet potato, yam, turnip, sweetcorn, acorn squash, bitter melon,
+butternut squash, banana squash, courgette, zucchini, cucumber,
+marrow, patty pans, pumpkin, spaghetti squash, tomato, watercress
+
+FRUITS
+açaí, apple, akee, apricot, avocado, banana, bilberry, blackberry,
+blueberry, boysenberry, crab apples, currant, cherry, chico fruit,
+cloudberry, coconut, cranberry, cucumber, damson, date, dragonfruit,
+durian, elderberry, feijoa, fig, goji berry, gooseberry, grape, raisin,
+grapefruit, guava, honeyberry, huckleberry, jackfruit, juniper berry,
+kiwi, kumquat, lemon, lime, mango, cantaloupe, honeydew, watermelon,
+nectarine, orange, blood orange, clementine, mandarine, tangerine,
+papaya, passionfruit, peach, pear, persimmon, plantain, plum, prune
+pineapple, pomegranate, pomelo, quince, raspberry, salmonberry, redcurrant,
+star fruit, strawberry, ugli fruit, white cur, olive, pea, pumpkin, squash,
+tomato, zucchini
+
+NUTS & SEEDS
+acorn, almond, american chestnut, beech nut, chestnut, brazil nut, cashew,
+chestnut, chia seed, olives, cocoa bean, coffee bean, corn nut, fennel,
+hazelnut, kola nut, lotus seed, macadamia, mustar, pumpkin seed, rapeseed,
+sesame seed, sunflower seed, walnut
+
+MEATS
+beef, beef heart, beef liver, beef tongue, buffalo, bison, calf liver,
+caribou, goat, ham, horse, kangaroo, lamb, moose, mutton, pork, bacon,
+rabbit, snake, veal, venison, chicken, chicken liver, duck, duck liver,
+emu
+    Gizzards
+    Goose
+    Goose Liver
+    Grouse
+    Guinea Hen
+    Liver
+    Organs
+    Ostrich
+    Partridge
+    Pheasant
+    Quail
+    Squab
+    Turkey

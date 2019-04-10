@@ -14,6 +14,6 @@ if($conn->connect_error){
     die("ERROR: Could not connect. " . $conn->connect_error);
 }
 
-echo "Connected successfully";
+echo "Connected successfully\n";
 
 ?>

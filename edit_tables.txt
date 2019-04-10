@@ -1,0 +1,27 @@
+ALTER TABLE user
+DROP FOREIGN_KEY kitchen_id,
+DROP FOREIGN_KEY shoppingList_id,
+DROP FOREIGN_KEY diet_id;
+
+ALTER TABLE user
+DROP COLUMN kitchen_id,
+DROP COLUMN shoppingList_id,
+DROP COLUMN diet_id;
+
+ALTER TABLE kitchen
+ADD COLUMN user_id INT;
+
+ALTER TABLE shopping_list
+ADD COLUMN user_id INT;
+
+ALTER TABLE diet
+ADD COLUMN user_id INT;
+
+ALTER TABLE kitchen
+ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+
+ALTER TABLE shopping_list
+ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
+
+ALTER TABLE diet
+ADD FOREIGN KEY (user_id) REFERENCES user(user_id);
