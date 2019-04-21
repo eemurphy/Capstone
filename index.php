@@ -4,17 +4,20 @@ session_start();
 ?>
 <html lang="en">
 <head>
-<title> Home </title>
-<meta charset = "UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/style.css">
+  <title> Home </title>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="searchquery.js"> </script>
 </head>
 <body>
 
 <!-- Header-->
 <div class="header">
  <h1> ricehippy </h1>
-
+ <button id="btn1">Click Me</button>
+ <p id ="input"><div></div> </p>
 </div>
 
 <!-- Navigation Bar -->

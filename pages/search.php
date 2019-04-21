@@ -9,6 +9,7 @@ session_start();
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/style.css">
+<script type="text/javascript" src="../js/createRecipeCards.js"> </script>
 </head>
 <body>
 
@@ -84,11 +85,9 @@ session_start();
     ?>
     <hr>
 
-    <form action="search.php">
-      <input type="text" placeholder="Search" name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-
+      <input type="text" placeholder="Search" id = "search_simple">
+      <button id="simple_search" onclick="createCard()"><i class="fa fa-search"></i></button>
+    <div id="results"> </div>
 
   </div>
 </div>
