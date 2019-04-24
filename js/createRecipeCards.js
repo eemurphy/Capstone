@@ -1,8 +1,18 @@
 function createCard(){
   var url = createsimpleURL();
-  document.getElementById("results").innerHTML += url;
-  //$.getJSON(url, function(result){
-    document.getElementById("results").innerHTML += "2";
+      document.getElementById("results").innerHTML = "";
+  $.getJSON(url, function(result, status){
+    console.log(status);
+    for (x in result.hits) {
+      var card = document.createElement("div");
+      card.setAttribute('class', 'recipe-card');
+      var content = document.createTextNode(result.hits[x].recipe.label);
+      card.appendChild(content);
+      var element = document.getElementById("results");
+      element.appendChild(card);
+    }
+  });
+
     //for (x in result.hits) {
     //var card = document.createElement("p");
     //var content = document.createTextNode(result.hits[x].recipe.label);
