@@ -34,24 +34,121 @@ tomato, zucchini
 NUTS & SEEDS
 acorn, almond, american chestnut, beech nut, chestnut, brazil nut, cashew,
 chestnut, chia seed, olives, cocoa bean, coffee bean, corn nut, fennel,
-hazelnut, kola nut, lotus seed, macadamia, mustar, pumpkin seed, rapeseed,
+hazelnut, kola nut, lotus seed, macadamia, mustard seed, pumpkin seed, rapeseed,
 sesame seed, sunflower seed, walnut
 
-MEATS
+MEATS and PROTEINS
 beef, beef heart, beef liver, beef tongue, buffalo, bison, calf liver,
 caribou, goat, ham, horse, kangaroo, lamb, moose, mutton, pork, bacon,
 rabbit, snake, veal, venison, chicken, chicken liver, duck, duck liver,
-emu
-    Gizzards
-    Goose
-    Goose Liver
-    Grouse
-    Guinea Hen
-    Liver
-    Organs
-    Ostrich
-    Partridge
-    Pheasant
-    Quail
-    Squab
-    Turkey
+emu, gizzards, goose, liver, ostrich, pheasant, quail, squab, turkey,
+Ground beef, ground pork, sausage, Deli Meats
+
+BEANS
+bean burgers, black beans, black-eyed peas, fava beans, hummus,
+kidney beans, lentils, lima beans, navy beans, pinto beans, soy beans,
+split peas, white beans
+
+
+SOY
+tempeh, texturized vegetable protein, TVP, tofu, veggie burgers
+
+
+Nuts and Seeds
+almond butter, chia seeds, peanut butter
+
+
+SEAFOOD
+Finfish, catfish, cod, flounder, haddock, halibut, herring, mackerel, pollock,
+porgy, salmon, sea bass, snapper, sushi, swordfish, tilapia, trout, tuna,
+anchovies, sardines, canned tuna
+
+SHELLFISH
+clams, crab, crayfish, lobster, mussels, octopus, oysters, scallops, shrimp,
+squid, calamari
+
+DAIRY
+Whole Milk, 2% Fat Milk, Low Fat Milk, Fat-Free Milk,
+Whole Lactose Reduced Milk, 2% Fat Lactose Reduced Milk,
+Fat-Free Lactose Reduced Milk, Whole Lactose-Free Milk,
+2% Fat Lactose-Free Milk, Fat-Free Lactose-Free Milk,
+Powdered Milk, Nonfat Powdered Milk, Evaporated Milk,
+Skimmed Evaporated Milk, Chocolate Milk, Strawberry Milk, Whole Milk Yogurt,
+Low Fat Yogurt, Fat-Free Yogurt, Whole Milk Fruit Yogurt, Low Fat Fruit Yogurt,
+Fat-Free Fruit Yogurt, Greek Plain Yogurt, Greek Low Fat Yogurt,
+Greek Nonfat Yogurt, Drinkable Yogurt, Lowfat Drinkable Yogurt,
+Whole Milk Puddings, 2%  Milk Puddings, Ice milk, Frozen Yogurt,
+Lowfat Frozen Yogurt, ice Cream, Low Fat ice Cream, goat milk, Asiago,
+Balaton, Barry's Bay Cheddar, Blue cheese, Buffalo cheese, Dry Jack cheese,
+Finlandia Swiss, Folded cheese with mint, Four Herb Gouda, Frying Cheese,
+Gabriel cheese, Gruyere cheese, Haloumi-Style Cheese, Jindi Brie cheese,
+Longhorn cheese, Marble Cheddar, Monterey Jack Dry cheese,
+Orkney Extra Mature Cheddar, Parmesan cheese, Parmigiano cheese,
+Parmigiano Reggiano cheese, Pecorino cheese, Pecorino Romano cheese,
+Penbryn cheese, Plymouth Cheese, Pressato cheese, Pyengana Cheddar, Queso,
+Reggianito cheese, Ricotta Salata, Romano cheese, Smoked Gouda, Swiss cheese,
+Tillamook Cheddar cheese, Wellington cheese, Aragon cheese, Beaufort cheese,
+Bierkase cheese, Blarney cheese, Canadian Cheddar cheese, Cheddar cheese,
+Cheshire cheese, Cojack cheese, Colby-Jack cheese, Gouda cheese,
+Monterey Jack cheese, Provolone cheese, Roquefort cheese, String cheese,
+Sweet Style Swiss, Tete de Moine, Tibet cheese, Yorkshire Blue cheese,
+American Cheese, Baby Swiss, Colby cheese, Cream Havarti, Curd cheese, Feta,
+Fresh Jack cheese, Havarti cheese, Monastery Cheeses, Morbier cheese,
+Mozzarella cheese, Paneer cheese, Pasteurized Processed cheese, Pepper jack cheese,
+Babybel cheese, Bakers cheese, Basket Cheese, Bath Cheese, Beer Cheese, Boursin cheese,
+Breakfast Cheese, Brie cheese, Butte cheese, Cottage Cheese, Cream Cheese,
+Crema Mexicana, Farmer cheese, Feta cheese, Fresh Mozzarella, Fresh Ricotta,
+Fruit Cream Cheese, Gorgonzola cheese, Kugelkase, mayonnaise, Mozzarella cheese,
+Munster cheese, Queso Blanco, Queso Fresco, Queso Jalapeno, Ricotta cheese, Butter,
+Butter Fat, Butter Oil, Buttermilk, Cheese, Condensed Milk, Cream, heavy cream,
+Curds, Custard, Delactosed Whey, Demineralized Whey, Dry Milk Powder,
+Ghee, Goat Cheese, Goat Milk, Half and Half, Lactose, Lactulose, Malted Milk,
+Milk, Milk Derivative, Milk Fat, Milk Powder, Milk Protein, Natural Butter Flavor,
+Nonfat Milk, Nougat, Paneer, Pudding, Sheep Milk, Skim Milk, Sour Cream,
+Sweetened Condensed Milk, Sweet Whey, Whey, Whey Powder, Whey Protein Concentrate,
+Whipped Cream, Whipped Topping, Whole Milk, Yogurt
+
+GRAINS
+Spaghetti, Fedelini, Capellini, Fusilli, Soba, Udon, Ziti, Fettuccine, Lasagne,
+Linguine, Tripoline, Fusilli, Manicotti, Mezze penne, Penne, Penne rigate,
+Rigatoni, Farfalle, Pipe pasta, Rotelle, Rotini, Gnocchi, Spätzle, Couscous,
+Egg barley, Orzo, risoni, Pearl Pasta, Quadrettini, Stelle, Pierogi, Ravioli,
+Tortellini, Tortelloni, amaranth, brown rice, buckwheat, kamut, millet, muesli,
+oatmeal, popcorn, quinoa, rolled oats, sorghum, spelt, whole grain cornmeal,
+whole rye, whole wheat bread, cereal flakes, whole wheat crackers,
+whole wheat pasta, whole wheat tortillas, wild rice, bagels, biscuits,
+breadcrumbs, cakes, cookies, corn flakes, corn tortillas, cornbread,
+saltine crackers, English muffins, flour tortilla, French bread, grits,
+hominy, matzo, naan, noodles, pancakes, macaroni, pie crust, pastry crust,
+pita bread, pizza crust, polenta, pretzels, ramen noodles, rice cakes,
+rice paper, rice vermicelli, waffles, white bread, white rice, sandwich buns,
+dinner rolls, rice
+
+BAKING INGREDIENTS
+All-Purpose Flour, Cake Flour, Pastry Flour, Bread Flour, Self-Rising Flour,
+Whole-Wheat Flour, Gluten-Free Flour, Granulated Sugar, Superfine Sugar,
+Confectioners' Sugar, Brown Sugar, Coarse Sugar, Molasses, Honey,
+Maple Syrup, Agave Nectar, Baking Soda, Baking Powder, Active Dry Yeast,
+Instant Yeast, Fresh Yeast, Unsweetened Chocolate, Dark Chocolate,
+Milk Chocolate, White Chocolate, Chocolate Chips, Unsweetened Cocoa Powder,
+Ground Chocolate, Vanilla Extract, Salt, Corn Syrup, Pumpkin Puree, Sour Cherries,
+Applesauce, Maraschino Cherries, Mincemeat, Chestnut Puree, Peppermints,
+Candy Cane, Marshmallows, Mini-Marshmallows, Caramel Squares, Marshmallow Fluff,
+Oreo Crumbs, Ritz Crackers, Pretzels, Malted Milk, Raisins, Currants, Glace Cherries,
+Candied Citrus Peel, Candied Ginger, Rosemary, Coriander, Mint, Lavender, Vanilla,
+Vanilla Beans, Flax, Cornmeal, Wheat Germ, Bran, Rice Krispies, Baking Soda,
+Baking Powder, Cream of Tartar, Meringue Powder, Coconut,
+Shredded Coconut, Sweetened Coconut, Unsweetened Coconut, Olive Oil, Canola Oil,
+Coconut Oil, Peanut Oil, Lard, ShorteningSalts, Table Salt, Kosher Salt, Sea Salt,
+Rock Salt, Matcha Powder, Marzipan, Food Coloring, Nutmeg, Cloves, Allspice, Tonka Bean,
+Cardamom, Ginger, Anise, Pepper, Almond Butter, Hazelnut Butter, Jam, Jelly,
+Marmalade, Balsamic vinegar, White vinegar, Red Wine vinegar, Apple Cider vinegar,
+Rice Wine vinegar
+
+ALCOHOL
+Brandy, Bourbon, Kahlua, Rum, Port, Whisky, Red Wine, White Wine, Vodka
+
+
+
+BEVERAGES
+Coffee, Tea, Green Tea, Hot Chocolate Powder, Espresso Powder

@@ -8,7 +8,7 @@ session_start();
 <title> Home </title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/search.css">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="../js/createRecipeCards.js"> </script>
 
@@ -98,8 +98,6 @@ session_start();
   <h2>created by Erin Murphy</h2>
 </div>
 
-<!-- Scripts -->
-<script type="text/javascript" src="home.js"> </script>
 
 </body>
 </html>

@@ -1,3 +1,6 @@
+@import "bourbon";
+
+@import url('login.css');
 
 * {
   box-sizing: border-box;
@@ -90,20 +93,103 @@ body {
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
-  flex: 30%; /* Set the width of the sidebar */
+  flex: 20%; /* Set the width of the sidebar */
   background-color: #C2EFC2;
-  padding: 20px;
+  padding: 5px;
   color: #347A33;
 }
 
 /* Main column */
 .main {
-  flex: 70%; /* Set the width of the main content */
+  flex: 80%; /* Set the width of the main content */
   background-color: #E8FFE8;
-  padding: 20px;
-  color: #083A07;
+  padding: 10px;
 }
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #70BF6E;
+  color: #E8FFE8;
+  font-size: 10px;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+div.recipe-card {
+   border-radius: 15px;
+	 font-family: 'Roboto', sans-serif;
+   background: #fff;
+   margin: 20px 20px;
+   box-shadow: 0px 0px 30px 2px #000;
+   float: left;
+   width: 250px;
+   height:auto;
+}
+div.headimg {
+  border-radius: 15px;
+  height: 250px;
+}
+
+div.headimg img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+div.text-box {
+  border-radius: 15px;
+  height: 150px;
+}
+
+.food {
+         color: #347A33;
+         text-align: left;
+         vertical-align: middle;
+         text-transform: uppercase;
+         letter-spacing: 0.1em;
+         margin: 5px 5px;
+         font-size: medium;
+         height: 40%;
+}
+.fa-cutlery {
+         color: #9B9B9B;
+         margin: 5% 5%;
+         position: relative;
+         bottom: 0;
+}
+.fa-users {
+         color: #9B9B9B;
+         margin: 0% 5%;
+         position: relative;
+         bottom: 0;
+}
+.info {
+      margin: 5px 5px;
+      font-size: small;
+      text-transform: uppercase;
+      vertical-align: text-bottom;
+      height: 30%;
+      color: #9B9B9B;
+}
+.recipe-card a.btn {
+  border-radius: 15px;
+      display: block;
+      background: #347A33;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-align: center;
+      padding: 10px;
+      transition: 250ms;
+      position: relative;
+      bottom: 0;
+}
+
+
 @media screen and (max-width: 700px) {
   .row {
     flex-direction: column;
@@ -126,12 +212,4 @@ body {
   .navbar .login-container {
     float: none;
   }
-}
-
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #70BF6E;
-  color: #E8FFE8;
-  font-size: 10px;
 }
