@@ -172,8 +172,10 @@ div.text-box {
       font-size: small;
       text-transform: uppercase;
       vertical-align: text-bottom;
+      width: 100%;
       height: 30%;
       color: #9B9B9B;
+      overflow: hidden;
 }
 .recipe-card a.btn {
   border-radius: 15px;
@@ -187,6 +189,7 @@ div.text-box {
       transition: 250ms;
       position: relative;
       bottom: 0;
+      text-decoration:none;
 }
 
 

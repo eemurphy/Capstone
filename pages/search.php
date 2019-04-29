@@ -10,8 +10,9 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="../css/search.css">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../js/createRecipeCards.js"> </script>
-
+<script src="https://developer.edamam.com/attribution/badge.js"></script>
 </head>
 <body>
 
@@ -53,27 +54,141 @@ session_start();
 <!-- Side and Main Content -->
 <div class="row">
   <div class="side">
-    <form action = "../php/searching.php">
+    <div class = "filters">
     <h3> Ingredients </h3>
-    <input type="text" placeholder="Search" name="search"><br>
+    <input type="text" placeholder="Search" name="ingsearch"><br>
+    <h3> Maximum Number of Ingredients </h3>
+    <div class="IngNum-slider">
+      <input class="maxIngRange" id="maxIngRange" name = "ingr" type="range" min="3" value="25" max="25" step="1">
+      <span class="maxIngAns"></span>
+    </div>
+    <script type="text/javascript">
+      var range = $('.maxIngRange'),
+          value = $('.maxIngAns');
 
-    <h3> Diets </h3>
-    <input type="text" placeholder="Search" name="search"><br>
-    <input type="checkbox"> Use My Diet <br>
-    <input type="checkbox"> Low Carb <br>
-    <input type="checkbox"> Vegetarian <br>
-    <input type="checkbox"> Vegan <br>
-    <h3> Other </h3>
-    <input type="checkbox"> Use My Kitchen <br>
-    <input type="checkbox"> Breakfast <br>
-    <input type="checkbox"> Lunch <br>
-    <input type="checkbox"> Dinner <br>
-    <input type="checkbox"> Snacks/Appetizers <br>
-    <input type="checkbox"> Drinks <br>
-    <input type="checkbox"> Desserts <br>
+      value.html(range.attr('value'));
+
+      range.on('input', function(){
+        value.html(this.value);
+      });
+    </script>
+    <h3> Calories </h3>
+    <div class="IngNum-slider">
+      <h6> Minimum </h6>
+      <input class="minCal" id="minCal" type="range" min="0" value="0" max="2000" step="1">
+      <span class="minCalAns"></span>
+      <h6> Maximum </h6>
+      <input class="maxCal" id="maxCal" type="range" min="0" value="2000" max="2000 step="1">
+      <span class="maxCalAns"></span>
+    </div>
+    <script type="text/javascript">
+      var range3 = $('.minCal'),
+          value3 = $('.minCalAns');
+
+      value3.html(range3.attr('value'));
+
+      range3.on('input', function(){
+        value3.html(this.value);
+      });
+
+      var range2 = $('.maxCal'),
+          value2 = $('.maxCalAns');
+
+      value2.html(range2.attr('value'));
+
+      range2.on('input', function(){
+        value2.html(this.value);
+      });
+    </script>
+
+    <h3> Time </h3>
+    <div class="IngNum-slider">
+      <h6> Minimum </h6>
+      <input class="minTime" id="minTime" type="range" min="0" value="0" max="500" step="1">
+      <span class="minTimeAns"></span>
+      <h6> Maximum </h6>
+      <input class="maxTime" id="maxTime" type="range" min="3" value="500" max="500" step="1">
+      <span class="maxTimeAns"></span>
+    </div>
+    <script type="text/javascript">
+      var min = $('.minTime'),
+          minval = $('.minTimeAns');
+
+      minval.html(min.attr('value'));
+
+      min.on('input', function(){
+        minval.html(this.value);
+      });
+
+      var max = $('.maxTime'),
+          maxval = $('.maxTimeAns');
+
+      maxval.html(max.attr('value'));
+
+      max.on('input', function(){
+        maxval.html(this.value);
+      });
+    </script>
+    <div class='checks' id='checks'>
+    <h3> Diet </h3>
+    <input type="checkbox" name = "health" value="paleo"> Paleo <br>
+    <input type="checkbox" name = "health" value="vegan"> Vegan <br>
+    <input type="checkbox" name = "health" value="vegetarian"> Vegetarian <br>
+    <input type="checkbox" name = "health" value="gluten-free"> Gluten-free <br>
+    <input type="checkbox" name = "health" value="kosher"> Kosher <br>
+    <input type="checkbox" name = "health" value="alcohol-free"> Alcohol-free <br>
+    <input type="checkbox" name = "health" value="dairy-free"> Dairy-free <br>
+    <input type="checkbox" name = "health" value="fish-free"> Fish-free <br>
+    <input type="checkbox" name = "health" value="shellfish-free"> Shellfish-free <br>
+    <input type="checkbox" name = "health" value="low-sugar"> Sugar-free <br>
+    <input type="checkbox" name = "health" value="peanut-free"> Peanut-free <br>
+    <input type="checkbox" name = "health" value="pescatarian"> Pescatarian <br>
+    <input type="checkbox" name = "health" value="pork-free"> Pork-free <br>
+    <input type="checkbox" name = "health" value="red-meat-free"> Red meat-free <br>
+    <input type="checkbox" name = "health" value="soy-free"> Soy-free <br>
+    <input type="checkbox" name = "health" value="sugar-conscious"> Less than 4g sugar <br>
+    <input type="checkbox" name = "health" value="wheat-free"> Wheat-free <br>
+    <input type="checkbox" name = "health" value="celery-free"> Celery-free <br>
+    <input type="checkbox" name = "health" value="crustacean-free"> Crustacean-free <br>
+    <input type="checkbox" name = "health" value="kidney-friendly"> Kidney friendly <br>
+    <input type="checkbox" name = "health" value="egg-free"> Egg-free <br>
+    <input type="checkbox" name = "health" value="low-potassium"> Low-potassium <br>
+    <input type="checkbox" name = "health" value="lupine-free"> Lupine-free <br>
+    <input type="checkbox" name = "health" value="mustard-free"> Mustard-free <br>
+    <input type="checkbox" name = "health" value="No-oil-added"> No oil added <br>
+    <input type="checkbox" name = "health" value="sesame-free"> Sesame-free <br>
+    <input type="checkbox" name = "health" value="tree-nut-free"> Tree nut-free <br>
+    <h3> Cuisine </h3>
+    <input type="checkbox" name = "cuisineType" value="mexican"> Mexican <br>
+    <input type="checkbox" name = "cuisineType" value="italian"> Italian <br>
+    <input type="checkbox" name = "cuisineType" value="indian"> Indian <br>
+    <input type="checkbox" name = "cuisineType" value="thai"> Thai <br>
+    <input type="checkbox" name = "cuisineType" value="greek"> Greek <br>
+    <input type="checkbox" name = "cuisineType" value="chinese"> Chinese <br>
+    <input type="checkbox" name = "cuisineType" value="japanses"> Japanese <br>
+    <input type="checkbox" name = "cuisineType" value="american"> American <br>
+    <input type="checkbox" name = "cuisineType" value="mediterranean"> Mediterranean<br>
+    <input type="checkbox" name = "cuisineType" value="korean"> Korean <br>
+    <input type="checkbox" name = "cuisineType" value="caribbean"> Caribbean <br>
+    <input type="checkbox" name = "cuisineType" value="spanish"> Spanish <br>
+    <input type="checkbox" name = "cuisineType" value="french"> French <br>
+    <input type="checkbox" name = "cuisineType" value="seafood"> Seafood <br>
+    <h3> Meal Type </h3>
+    <input type="checkbox" name = "cuisineType" value="breakfast"> Breakfast <br>
+    <input type="checkbox" name = "cuisineType" value="lunch"> Lunch <br>
+    <input type="checkbox" name = "cuisineType" value="dinner"> Dinner <br>
+    <input type="checkbox" name = "cuisineType" value="snack"> Snacks <br>
+    <input type="checkbox" name = "cuisineType" value="appetizer"> Appetizers <br>
+    <input type="checkbox" name = "cuisineType" value="dessert"> Desserts <br>
+    </div>
+    <div class = 'checks' id='mychecks'>
+    <h3> Users Only </h3>
+    <input type="checkbox" name = "mykitchen"> Use My Kitchen <br>
+    <input type="checkbox" name = "mydiet"> Use My Diet <br>
     <br>
-    <input type="submit" value="Apply Filters">
-  </form>
+    <button onclick="filtersApplied()" value="Apply Filters">Apply Filters </button>
+    </div>
+  </div>
 
   </div>
   <div class="main">
@@ -96,6 +211,7 @@ session_start();
 
 <div class="footer">
   <h2>created by Erin Murphy</h2>
+  <div id="edamam-badge" data-color="white"></div>
 </div>
 
 
