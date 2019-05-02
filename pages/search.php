@@ -55,7 +55,8 @@ session_start();
 <div class="row">
   <div class="side">
     <div class = "filters">
-    <h3> Ingredients </h3>
+    <button class = 'collapse'> Ingredients</button>
+    <div class = 'ingrs'>
     <input type="text" placeholder="Search" name="ingsearch"><br>
     <h3> Maximum Number of Ingredients </h3>
     <div class="IngNum-slider">
@@ -72,13 +73,14 @@ session_start();
         value.html(this.value);
       });
     </script>
-    <h3> Calories </h3>
+    </div>
+    <button class = 'collapse'>Calories</button>
     <div class="IngNum-slider">
       <h6> Minimum </h6>
       <input class="minCal" id="minCal" type="range" min="0" value="0" max="2000" step="1">
       <span class="minCalAns"></span>
       <h6> Maximum </h6>
-      <input class="maxCal" id="maxCal" type="range" min="0" value="2000" max="2000 step="1">
+      <input class="maxCal" id="maxCal" type="range" min="0" value="2000" max="2000" step="1">
       <span class="maxCalAns"></span>
     </div>
     <script type="text/javascript">
@@ -101,7 +103,7 @@ session_start();
       });
     </script>
 
-    <h3> Time </h3>
+    <button class = 'collapse'>Time</button>
     <div class="IngNum-slider">
       <h6> Minimum </h6>
       <input class="minTime" id="minTime" type="range" min="0" value="0" max="500" step="1">
@@ -129,8 +131,10 @@ session_start();
         maxval.html(this.value);
       });
     </script>
+
     <div class='checks' id='checks'>
-    <h3> Diet </h3>
+    <button class = 'collapse'>Diet</button>
+    <div class = 'diets'>
     <input type="checkbox" name = "health" value="paleo"> Paleo <br>
     <input type="checkbox" name = "health" value="vegan"> Vegan <br>
     <input type="checkbox" name = "health" value="vegetarian"> Vegetarian <br>
@@ -158,7 +162,9 @@ session_start();
     <input type="checkbox" name = "health" value="No-oil-added"> No oil added <br>
     <input type="checkbox" name = "health" value="sesame-free"> Sesame-free <br>
     <input type="checkbox" name = "health" value="tree-nut-free"> Tree nut-free <br>
-    <h3> Cuisine </h3>
+    </div>
+    <button class = 'collapse'>Cuisine</button>
+    <div class = 'cuisines'>
     <input type="checkbox" name = "cuisineType" value="mexican"> Mexican <br>
     <input type="checkbox" name = "cuisineType" value="italian"> Italian <br>
     <input type="checkbox" name = "cuisineType" value="indian"> Indian <br>
@@ -173,13 +179,16 @@ session_start();
     <input type="checkbox" name = "cuisineType" value="spanish"> Spanish <br>
     <input type="checkbox" name = "cuisineType" value="french"> French <br>
     <input type="checkbox" name = "cuisineType" value="seafood"> Seafood <br>
-    <h3> Meal Type </h3>
+    </div>
+    <button class = 'collapse'>Meal Type</button>
+    <div class = 'meals'>
     <input type="checkbox" name = "cuisineType" value="breakfast"> Breakfast <br>
     <input type="checkbox" name = "cuisineType" value="lunch"> Lunch <br>
     <input type="checkbox" name = "cuisineType" value="dinner"> Dinner <br>
     <input type="checkbox" name = "cuisineType" value="snack"> Snacks <br>
     <input type="checkbox" name = "cuisineType" value="appetizer"> Appetizers <br>
     <input type="checkbox" name = "cuisineType" value="dessert"> Desserts <br>
+    </div>
     </div>
     <div class = 'checks' id='mychecks'>
     <h3> Users Only </h3>
@@ -188,6 +197,22 @@ session_start();
     <br>
     <button onclick="filtersApplied()" value="Apply Filters">Apply Filters </button>
     </div>
+    <script>
+      var coll = document.getElementsByClassName("collapse");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
   </div>
 
   </div>

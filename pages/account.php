@@ -99,7 +99,8 @@ session_start();
             if ($result->num_rows > 0) {
               // output data of each row
               while($row = $result->fetch_assoc()) {
-                echo $row["amount"]. " " .$row["name"]. "<br>";
+                echo $row["amount"]. " " .$row["name"]. '<input type="checkbox" name="priority" value=' . $row["name"] . '> Prioritized
+                    <form method="post" action="../php/deleteIng.php"> <input type="hidden" name="ingredient" value=' . $row["name"] . '> <button type="submit">Delete</button></form>';
               }
             } else {
               echo "0 results";
