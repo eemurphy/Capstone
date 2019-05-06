@@ -72,8 +72,6 @@ session_start();
   <h2>figure out how to lock to bottom</h2>
 </div>
 
-<!-- Scripts -->
-<script type="text/javascript" src="home.js"> </script>
 
 </body>
 </html>

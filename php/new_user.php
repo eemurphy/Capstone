@@ -28,7 +28,9 @@
    $kitchen = "INSERT INTO kitchen (ing_amt, user_id) VALUES (0, $user_id)";
    $shoppinglist = "INSERT INTO shopping_list (user_id) VALUES ($user_id)";
    $diet = "INSERT INTO diet (user_id) VALUES ($user_id)";
+   $board = "INSERT INTO board (user_id) VALUES ($user_id)";
    mysqli_query($conn, $kitchen) or die(mysqli_error($conn));
+   mysqli_query($conn, $board) or die(mysqli_error($conn));
    mysqli_query($conn, $shoppinglist) or die(mysqli_error($conn));
    mysqli_query($conn, $diet) or die(mysqli_error($conn));
    $_SESSION['login_user'] = $myusername;

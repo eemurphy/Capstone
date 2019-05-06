@@ -132,12 +132,19 @@ div.recipe-card {
 div.headimg {
   border-radius: 15px;
   height: 250px;
+  position: relative;
 }
 
 div.headimg img {
   width: 100%;
   height: auto;
   border-radius: 15px;
+}
+
+.heartbtn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
 }
 
 div.text-box {
@@ -153,9 +160,11 @@ div.text-box {
          letter-spacing: 0.1em;
          margin: 5px 5px;
          font-size: medium;
-         height: 40%;
+         height: 30%;
+         overflow: hidden;
 }
-.fa-cutlery {
+
+.fa-utensils {
          color: #9B9B9B;
          margin: 5% 5%;
          position: relative;
@@ -169,7 +178,7 @@ div.text-box {
 }
 .info {
       margin: 5px 5px;
-      font-size: small;
+      font-size: x-small;
       text-transform: uppercase;
       vertical-align: text-bottom;
       width: 100%;
@@ -190,6 +199,35 @@ div.text-box {
       position: relative;
       bottom: 0;
       text-decoration:none;
+}
+
+.ab {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  display: none;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.ab:hover {
+  background-color: #ddd;
+  color: black;
+
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
 }
 
 .collapse {

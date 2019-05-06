@@ -2,6 +2,8 @@
 var myvars = '';
 var x = '';
 var checks = '';
+var currFrom = 0;
+var currTo = 24;
 
 function createCard(){
   var url;
@@ -24,7 +26,24 @@ function createCard(){
 
       var img = document.createElement('img');
       img.src = result.hits[x].recipe.image;
+
+      var favbtn = document.createElement('div');
+      favbtn.setAttribute('class', 'heartbtn');
+      var favtxt = document.createElement('i');
+      favtxt.setAttribute('class', "far fa-heart");
+      favtxt.id = result.hits[x].recipe.label + '?' + result.hits[x].recipe.image + '?' + result.hits[x].recipe.url + '?' + result.hits[x].recipe.yield + '?' + (Math.round(result.hits[x].recipe.calories / result.hits[x].recipe.yield));
+      favbtn.addEventListener('click', function() {
+        favIt(event);
+
+      });
+      if (isFavorited(result.hits[x].recipe.label) == 'true') {
+        favtxt.setAttribute('class', "fas fa-heart");
+
+      }
+
+      favbtn.appendChild(favtxt);
       headimg.appendChild(img);
+      headimg.appendChild(favbtn);
       card.appendChild(headimg);
 
       var title = document.createElement("h1");
@@ -54,7 +73,7 @@ function createCard(){
       text.appendChild(i2);
 
       var i3 = document.createElement('i');
-      i3.setAttribute('class', 'fa fa-cutlery');
+      i3.setAttribute('class', 'fas fa-utensils');
       i3.innerHTML = " " + Math.round(result.hits[x].recipe.calories / result.hits[x].recipe.yield) + " calories";
       text.appendChild(i3);
 
@@ -71,7 +90,14 @@ function createCard(){
       var element = document.getElementById("results");
       element.appendChild(card);
     }
+
+
   });
+
+  var next = document.getElementById('next');
+  var prev = document.getElementById('prev');
+  next.style.display = 'inline';
+  prev.style.display = 'inline';
 }
 
 function createsimpleURL() {
@@ -95,13 +121,19 @@ function filtersApplied() {
   var minTime = document.getElementById('minTime').value;
   var maxTime = document.getElementById('maxTime').value;
 
+  currTo = currFrom + 24;
+
   var cals = 'calories=' + minCal + '-' + maxCal;
   var time = 'time=' + minTime + '-' + maxTime;
+  var fromto = 'from=' + currFrom + '&to=' + currTo;
   console.log('&' + maxIng + '&' + cals + '&' + time)
 
-  checks = '&' + maxIng + '&' + cals + '&' + time + $('#checks :input').serialize();
+  check_ser =  $('#checks :input').serialize();
+
+  checks = '&' + maxIng + '&' + cals + '&' + time + '&' + fromto + '&' + check_ser;
+  currFrom = currTo + 1;
   x = document.getElementById("search_simple").value;
-  if (myvars || checks) {
+  if (myvars || check_ser) {
     return true;
     }
   return false;
@@ -138,4 +170,34 @@ function filtersURL() {
     console.log("https://api.edamam.com/search?q=" + x + myvars + checks);
   }
   return '';
+}
+
+function isFavorited(title) {
+  var bool = false;
+  $.ajax({
+    url:"../php/isFav.php",
+    type:"POST",
+    data: {recipe: title},
+    async: false,
+    success:function(data){
+      bool = data;
+    }
+  });
+  return bool;
+
+}
+
+function getNext() {
+  createCard();
+}
+
+function getPrev() {
+  if (currFrom < 50) {
+
+  }
+  else {
+    currFrom = currFrom - 50;
+    createCard();
+  }
+
 }

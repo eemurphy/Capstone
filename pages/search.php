@@ -4,7 +4,7 @@ session_start();
 ?>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <title> Home </title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,7 @@ session_start();
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="../js/createRecipeCards.js"> </script>
 <script src="https://developer.edamam.com/attribution/badge.js"></script>
+<script type="text/javascript" src="../js/favoriteRecipe.js"> </script>
 </head>
 <body>
 
@@ -195,7 +196,7 @@ session_start();
     <input type="checkbox" name = "mykitchen"> Use My Kitchen <br>
     <input type="checkbox" name = "mydiet"> Use My Diet <br>
     <br>
-    <button onclick="filtersApplied()" value="Apply Filters">Apply Filters </button>
+    <button onclick="createCard()" value="Apply Filters">Apply Filters </button>
     </div>
     <script>
       var coll = document.getElementsByClassName("collapse");
@@ -230,7 +231,10 @@ session_start();
       <input type="text" placeholder="Search" id = "search_simple">
       <button id="simple_search" onclick="createCard()"><i class="fa fa-search"></i></button>
     <div id="results"> </div>
-
+    <br>
+    <a href="#" id ='prev' class="ab previous round" onclick="getPrev();">&#8249;</a>
+    <a href="#" id = 'next' class="ab next round" onclick="getNext();">&#8250;</a>
+    <br>
   </div>
 </div>
 
